@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5aa61666a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- --------NAVBAR--------- -->
+    <div id="header">
+        <div class="container">
+        <nav class="navbar fixed-top">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <img src="PICTURES/logo3.png" width="10%" height="10%" class="logo">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"></button>
+            <ul>
+                <li onclick="opentab('home')"><a href="#header">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web developer</p>
+            <h1>I'm <span>Kristine Joy</span><br><span>Pagodpod Hetler</span></h1>
+        </div>
+    </div>
+</div>
+
+<!-- -----------services--------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">MY SERVICES</h1>
+        <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-video"></i>
+                    <h2>Video Editing</h2>
+                    <p>Removing unwanted footage or editing out some scene elements.
+                        Choosing the best shots and footage to go into the final output.
+                        Creating the flow of the narrative by arranging and rearranging scenes.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-image"></i>
+                    <h2>Photo Editing</h2>
+                    <p>Crop your images and clean them up.
+                        Adjust white balance.
+                        Adjust exposure and contrast.
+                        Adjust color vibrancy and saturation.</p>
+                    <a href="#">Learn More</a> 
+                </div>    
+         </div>
+    </div>
+</div>
+
+<!-- ------------about-------------- -->
+<div id="about">
+    <div class="container">
+        <h1 class="sub-title">ABOUT ME</h1>
+        <div class="row">
+            <div class="about-col-1">
+                <img src="PICTURES/user2.jpg">
+            </div>
+            <div class="about-col-2">
+                <p>I'm a 3rd year BSIT student at PHINMA University of Pangasinan. 19 years old. I live in Pantal, Dagupan city, Pangasinan. I realy like reading Novels. I'm also a K-Pop fan.</p>
+            
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Video Editing<br>Photo Editing</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>I've made a non-functional Food Ordering Website. <br>I made my first Portfolio Website</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2008-2011: Grades 1-3 Elementary at West Central Elementary School 1 <br>2011-2014: Grades 4-6 Elementary at Bolosan Elementary School
+                            <br>2014-2018: High School & 2018-2020: Senior Hgh School at JJDVSTVSS
+                            <br>2020-2026: College at PHINMA University of Pangasinan</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------contact- ----------------------->
+<div id="contact">
+    <div class="container">
+        <div id="row">
+            <div class="contact-left">
+                <h1 class="sub-title">CONTACT ME</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>hetlertine@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>09951162352</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+ }
+ 
+ </script>
+
+ 
+</body>
+</html>
